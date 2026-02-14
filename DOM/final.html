@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning journey</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="topics">
+        <li>DOM</li>
+        <li>JavaScript</li>
+        <li>C++</li>
+    </ul>
+</body>
+<script>
+function addTopic(topic) {
+    const li = document.createElement('li');
+    li.textContent = topic;
+    document.querySelector('.topics').appendChild(li);
+}
+
+// Add new topics
+addTopic('Understanding DOM');
+addTopic('Python');
+
+// Edit second item
+const secondLang = document.querySelector("ul.topics li:nth-child(2)");
+const newli = document.createElement('li');
+newli.textContent = "Mojo";
+secondLang.replaceWith(newli);
+
+// Edit first item
+const firstLang = document.querySelector("ul.topics li:first-child");
+firstLang.outerHTML = "<li>Python</li>";
+
+// Remove last item
+const lastLang = document.querySelector("ul.topics li:last-child");
+lastLang.remove();
+</script>
+</html>
