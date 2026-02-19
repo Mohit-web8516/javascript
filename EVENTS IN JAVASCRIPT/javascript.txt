@@ -1,0 +1,57 @@
+****************Asynchronous Code in JavaScript***********
+
+
+JavaScript is single-threaded, meaning it executes one line at a time in order. Normally, this is synchronous: each statement must finish before the next one runs. But in real-world applications, tasks like fetching data from a server, reading files, or waiting for user input can take time.
+
+
+******************************************
+
+Execution Context
+An execution context is the environment in which JavaScript code is evaluated and executed.
+
+Types:
+
+Global Execution Context (GEC) → Created when the script first runs. It contains global objects (window in browsers) and variables.
+
+Function Execution Context (FEC) → Created whenever a function is invoked. Each function call gets its own context.
+
+Each context has:
+
+Variable Environment → Stores variables and function declarations.
+
+Scope Chain → Determines variable accessibility.
+
+this Binding → Defines the value of this inside that context.
+
+****************************************************
+
+
+Call Stack
+The call stack is a data structure that keeps track of function calls in a Last-In, First-Out (LIFO) manner.
+
+When a function is called, its execution context is pushed onto the stack.
+
+***************************************************************
+
+Memory Heap
+The memory heap is where objects and reference types (arrays, functions, objects) are stored.
+
+Unlike the stack (which is structured), the heap is a large, mostly unstructured region of memory.
+
+Primitive values (numbers, strings, booleans) are stored directly in the stack, while objects are stored in the heap with references kept in the stack.
+
+
+********************************************************
+
+Blocking Code
+Definition: Code that stops further execution until the current task is finished.
+
+Effect: The program cannot do anything else while waiting.
+
+
+********************************************************
+
+Non-Blocking Code
+Definition: Code that initiates a task and allows other operations to continue while waiting for the result.
+
+Effect: Keeps applications responsive, especially for I/O operations (network requests, file reads).
