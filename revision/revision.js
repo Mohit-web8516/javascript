@@ -55,3 +55,24 @@ Person.prototype.greet = function() {
 const p1 = new Person("john");
 console.log(p1.greet()); // Hello, I am john
 
+
+////////////////////////////////
+
+// Promise
+const fetchData = new Promise((resolve, reject) => {
+  setTimeout(() => resolve("Data received!"), 1000);
+});
+
+fetchData.then(data => console.log(data)); // Data received!
+
+// Async/Await
+async function getData() {
+  try {
+    const result = await fetchData;
+    console.log(result); // Data received!
+  } catch (error) {
+    console.error(error);
+  }
+}
+getData();
+
