@@ -76,3 +76,15 @@ async function getData() {
 }
 getData();
 
+
+/////////////////////////////////////
+/////////////////////////////////////
+// DOM manipulation
+const heading = document.querySelector("h1");
+heading.textContent = "JavaScript Revision Done!";
+
+// Event handling
+document.querySelector("button").addEventListener("click", () => {
+  alert("Button clicked!");
+});
+
