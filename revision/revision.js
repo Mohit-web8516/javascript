@@ -88,3 +88,19 @@ document.querySelector("button").addEventListener("click", () => {
   alert("Button clicked!");
 });
 
+//////////////////////////////////////
+//////////////////////////////////////
+// Template literals
+const name = "Mohit";
+console.log(`Hello, ${name}!`);
+
+// Destructuring
+const user = { id: 1, username: "coder" };
+const { id, username } = user;
+console.log(id, username); // 1, coder
+
+// Spread operator
+const arr1 = [1, 2];
+const arr2 = [3, 4];
+const combined = [...arr1, ...arr2];
+console.log(combined); // [1, 2, 3, 4]
