@@ -40,7 +40,7 @@ console.log(count()); // 1
 console.log(count()); // 2
 ///////////////////////////////////////////
 // Object methods
-const obj = { name: "Mohit", age: 21 };
+const obj = { name: "john", age: 21 };
 console.log(Object.keys(obj));   // ["name", "age"]
 console.log(Object.values(obj)); // ["Mohit", 21]
 
@@ -52,6 +52,6 @@ Person.prototype.greet = function() {
   return `Hello, I am ${this.name}`;
 };
 
-const p1 = new Person("Mohit");
-console.log(p1.greet()); // Hello, I am Mohit
+const p1 = new Person("john");
+console.log(p1.greet()); // Hello, I am john
 
